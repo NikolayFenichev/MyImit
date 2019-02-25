@@ -1,0 +1,38 @@
+﻿<Window x:Class="Imitator_v_0._1.UVSWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="783.792" Width="909.5" Loaded="Window_Loaded_1" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid  Name="GridMain" Margin="-2,-2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="745" Width="904">
+        <Border BorderBrush="Black" BorderThickness="2" Margin="30,49,0,0" Height="558" Width="840" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <ScrollViewer>
+                <Grid Loaded="Grid_Loaded" Name="gridTable" Margin="-2,-2,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="180" Width="820">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="197*"/>
+                        <ColumnDefinition Width="197*"/>
+                        <ColumnDefinition Width="197*"/>
+                        <ColumnDefinition Width="197*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+        <Grid HorizontalAlignment="Left" Height="112" Margin="30,623,0,0" VerticalAlignment="Top" Width="840">
+            <Button Content="Сортировка" x:Name="sort_Button" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" Click="Sort_Button_Click" RenderTransformOrigin="-1.118,-0.034"/>
+            <Button Content="Очистить" x:Name ="delete_Button"  HorizontalAlignment="Left" Width="154" Margin="10,60,0,10" Click="Delete_Button_Click" Height="40"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="840">
+                <RichTextBox Name="panelMessage" VerticalScrollBarVisibility ="Auto"  Margin="182,9,9,9">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run  Text=""/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+            </Border>
+
+        </Grid>
+
+
+    </Grid>
+</Window>
