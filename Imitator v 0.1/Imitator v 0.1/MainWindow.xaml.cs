@@ -37,7 +37,7 @@ namespace Imitator_v_0._1
             WriteTimeout = 500
 
         };
-        public static bool FlagSimulation { get; private set; } = false;
+        public static bool FlagSimulation { get; private set; } = true;
 
         public MainWindow()
         {
@@ -89,12 +89,11 @@ namespace Imitator_v_0._1
             {
                 Owner = this
             };
-            if (Imitation.IsChecked == true)
+            if (Imitation.IsChecked == true) // работаем с имитационной моделью
             {
                 FlagSimulation = true;
                 try
                 {
-                    MbMaster = ModbusIpMaster.CreateIp(new TcpClient("127.0.0.1", 502));
                     mnaWindow.Show();
                 }
                 catch
@@ -103,7 +102,7 @@ namespace Imitator_v_0._1
                     Imitation.IsChecked = false;
                 }
             }
-            else
+            else // работаем с железом
             {
                 FlagSimulation = false;
                 MbMaster = ModbusSerialMaster.CreateRtu(sp);

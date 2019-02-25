@@ -239,3 +239,33 @@ D:\Git\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.Core
 D:\Git\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.CopyComplete
 D:\Git\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.exe
 D:\Git\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.pdb
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\Imitator v 0.1.exe.config
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\Imitator v 0.1.exe
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\Imitator v 0.1.pdb
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\NModbus4.dll
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\NModbus4.xml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csprojAssemblyReference.cache
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSWindow.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\CreateWindow.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\ErrorWindow.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MainWindow.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MNAWindow.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSAdressSignal.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSSettingsWindow.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSWindow.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\App.g.cs
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1_MarkupCompile.cache
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1_MarkupCompile.lref
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\CreateWindow.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\ErrorWindow.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MainWindow.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MNAWindow.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSAdressSignal.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSSettingsWindow.baml
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.g.resources
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator_v_0._1.Properties.Resources.resources
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.GenerateResource.cache
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.CoreCompileInputs.cache
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.CopyComplete
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.exe
+D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.pdb

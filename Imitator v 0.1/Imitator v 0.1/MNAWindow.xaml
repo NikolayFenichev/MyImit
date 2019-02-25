@@ -25,7 +25,7 @@
         <Grid HorizontalAlignment="Left" Height="112" Margin="30,623,0,0" VerticalAlignment="Top" Width="840">
             <Button Content="Сортировка" x:Name="sort_Button" HorizontalAlignment="Left" Height="40" Margin="10,10,0,0" VerticalAlignment="Top" Width="154" RenderTransformOrigin="-1.118,-0.034"/>
             <Button Content="Очистить" x:Name ="delete_Button"  HorizontalAlignment="Left" Width="154" Margin="10,60,0,10" Height="40"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="840">
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="112" VerticalAlignment="Top" Width="1060" Margin="0,0,-220,0">
                 <RichTextBox Name="panelMessage" VerticalScrollBarVisibility ="Auto"  Margin="182,9,9,9">
                     <FlowDocument>
                         <Paragraph>
@@ -35,54 +35,6 @@
                 </RichTextBox>
             </Border>
 
-        </Grid>
-        <Grid HorizontalAlignment="Left" Height="236" Margin="358,280,0,0" VerticalAlignment="Top" Width="260">
-            <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="100" Margin="53,16,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,6,0,0" VerticalAlignment="Top" Width="50"/>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,102,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.42,0.379"/>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,36,0,0" VerticalAlignment="Top" Width="50"/>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,133,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.42,0.379"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="10,135,0,0" VerticalAlignment="Top" Width="85">
-                <Grid HorizontalAlignment="Left" Height="44" Margin="-1" VerticalAlignment="Top" Width="85">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="44,6,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="17,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="44,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="17,6,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="2,3,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="2,25,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="69,3,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="69,25,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                </Grid>
-            </Border>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="10,185,0,0" VerticalAlignment="Top" Width="85">
-                <Grid HorizontalAlignment="Left" Height="43" VerticalAlignment="Top" Width="84" Margin="0,0,-1,-1">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="44,6,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="17,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="44,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="17,6,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="1,3,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="1,25,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="69,3,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="69,25,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                </Grid>
-            </Border>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="94" Margin="108,135,0,0" VerticalAlignment="Top" Width="86">
-                <Grid HorizontalAlignment="Left" Height="94" Margin="-1,0,-1,-2" VerticalAlignment="Top" Width="84">
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="45,33,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="17,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="45,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="10" Margin="17,33,0,0" Stroke="Black" VerticalAlignment="Top" Width="23"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="2,31,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="2,52,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="70,31,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="70,52,0,0" VerticalAlignment="Top" Width="13" Height="14"/>
-                    <Label Content="ЧРП" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="24,6,0,0"/>
-                </Grid>
-            </Border>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,66,0,0" VerticalAlignment="Top" Width="50"/>
-            <Label Content="Label" HorizontalAlignment="Left" Margin="85,52,0,0" VerticalAlignment="Top"/>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,169,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.42,0.379"/>
-            <Button Content="Button" HorizontalAlignment="Left" Height="29" Margin="199,200,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.42,0.379"/>
         </Grid>
 
 

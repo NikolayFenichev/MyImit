@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Imitator_v_0._1"
         mc:Ignorable="d"
-        Title="ErrorWindow" Height="335.18" Width="366.237" ResizeMode="NoResize">
+        Title="ErrorWindow" Height="343.63" Width="366.237" ResizeMode="NoResize">
     <Grid AutomationProperties.Name="grid">
         <Button Content="Ok" HorizontalAlignment="Center" Height="34" Width="118" VerticalAlignment="Bottom" Margin="120,0,120,16" AutomationProperties.Name="okButton" KeyUp="Button_KeyUp"/>
         <TextBlock Text="Устройство не отвечает." HorizontalAlignment="Center" FontSize="18" Margin="79,8,79,269"/>

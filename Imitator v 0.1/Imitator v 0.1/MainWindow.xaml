@@ -8,7 +8,7 @@
         Title="MainWindow" Height="163.754" Width="141.117" ResizeMode="NoResize">
     <Grid>
         <Button Content="Вспомсистемы" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="112" Height="34" Name="VspomSistems" Click="VspomSistems_Click"/>
-        <CheckBox Name ="Imitation" Content="Режим имитации" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top"/>
+        <CheckBox Name ="Imitation" Content="Режим имитации" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <Button Content="Насосные агрегаты" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="112" Height="34" x:Name="VspomSistems_Copy" Click="PumpingUnit_Click"/>
 
     </Grid>
