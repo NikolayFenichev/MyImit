@@ -4,16 +4,16 @@
 exe
 C#
 .cs
-D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\
 Imitator_v_0._1
 none
 false
 DEBUG;TRACE
-D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\App.xaml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\App.xaml
 71801285797
 
 21-1008167416
-14-618160188
+14-2050472929
 CreateWindow.xaml;ErrorWindow.xaml;MainWindow.xaml;MNAWindow.xaml;UVSAdressSignal.xaml;UVSSettingsWindow.xaml;UVSWindow.xaml;
 
 False

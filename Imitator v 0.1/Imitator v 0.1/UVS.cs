@@ -353,7 +353,7 @@ namespace Imitator_v_0._1
         public override void TurnOff() // отключение
         {
             Cmd += 512;
-            bool[] mass = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false };
+            //bool[] mass = new bool[] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false };
             if (!MainWindow.FlagSimulation)
                 mbMaster.WriteSingleRegister(SlaveAdress, 1, Cmd);
             else

@@ -32,8 +32,6 @@ namespace Imitator_v_0._1
         bool prevVV1OffTimer;
         bool prevVV2OffTimer;
         bool prevCurrentOnTimer;
-        bool prevCurrentOffTimer;
-        bool prevCurrentTimer;
 
         bool vV1OnTimer;
         bool vV2OnTimer;
@@ -42,7 +40,6 @@ namespace Imitator_v_0._1
         bool currentOnTimer;
         bool currentOffTimer;
         bool currentTimer;
-
 
         bool prevVV1On;
         bool prevVV2On;
@@ -103,246 +100,6 @@ namespace Imitator_v_0._1
 
         public override ushort State { get { return state; } }
         public override ushort Cmd { get; set; }
-
-        bool TimerPuskVV1On(int typeTimer, bool start, bool reset)
-        {
-            if (start && !reset && !flagForPuskVV1On)
-            {
-                internalTimeInTimerForPuskVV1On = MNAWindow.Timer;
-                flagForPuskVV1On = true;
-            }
-
-            if (reset)
-            {
-                flagForPuskVV1On = false;
-                internalTimeInTimerForPuskVV1On = 0;
-                return false;
-            }
-            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV1On + typeTimer) && internalTimeInTimerForPuskVV1On != 0)
-            {
-                return true;
-            }
-            else
-                return false;
-        }//таймер включения ВВ 1
-        bool TimerPuskVV2On(int typeTimer, bool start, bool reset)
-        {
-            if (start && !reset && !flagForPuskVV2On)
-            {
-                internalTimeInTimerForPuskVV2On = MNAWindow.Timer;
-                flagForPuskVV2On = true;
-            }
-
-            if (reset)
-            {
-                flagForPuskVV2On = false;
-                internalTimeInTimerForPuskVV2On = 0;
-                return false;
-            }
-            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV2On + typeTimer) && internalTimeInTimerForPuskVV2On != 0)
-            {
-                return true;
-            }
-            else
-                return false;
-        }//таймер включения ВВ 2
-        bool TimerPuskVV1Off(int typeTimer, bool start, bool reset)
-        {
-            if (start && !reset && !flagForPuskVV1Off)
-            {
-                internalTimeInTimerForPuskVV1Off = MNAWindow.Timer;
-                flagForPuskVV1Off = true;
-            }
-
-            if (reset)
-            {
-                flagForPuskVV1Off = false;
-                internalTimeInTimerForPuskVV1Off = 0;
-                return false;
-            }
-            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV1Off + typeTimer) && internalTimeInTimerForPuskVV1Off != 0)
-            {                
-                return true;
-            }
-            else
-                return false;
-        }//таймер отключения ВВ 1
-        bool TimerPuskVV2Off(int typeTimer, bool start, bool reset)
-        {
-            if (start && !reset && !flagForPuskVV2Off)
-            {
-                internalTimeInTimerForPuskVV2Off = MNAWindow.Timer;
-                flagForPuskVV2Off = true;
-            }
-
-            if (reset)
-            {
-                flagForPuskVV2Off = false;
-                internalTimeInTimerForPuskVV2Off = 0;
-                return false;
-            }
-            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV2Off + typeTimer) && internalTimeInTimerForPuskVV2Off != 0)
-            {
-                return true;
-            }
-            else
-                return false;
-        }//таймер отключения ВВ 2
-        bool TimerPuskCurrent(int typeTimer, bool start, bool reset)
-        {
-            if (start && !reset && !flagForPuskCurrent)
-            {
-                internalTimeInTimerForPuskCurrent = MNAWindow.Timer;
-                flagForPuskCurrent = true;
-            }
-
-            if (reset)
-            {
-                flagForPuskCurrent = false;
-                internalTimeInTimerForPuskCurrent = 0;
-                return false;
-            }
-            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskCurrent + typeTimer) && internalTimeInTimerForPuskCurrent != 0)
-            {
-                return true;
-            }
-            else
-                return false;
-        }// таймер набора тока
-        bool TimerStopCurrent(int typeTimer, bool start, bool reset)
-        {
-            if (start && !reset && !flagForStopCurrent)
-            {
-                internalTimeInTimerForStopCurrent = MNAWindow.Timer;
-                flagForStopCurrent = true;
-            }
-
-            if (reset)
-            {
-                flagForStopCurrent = false;
-                internalTimeInTimerForStopCurrent = 0;
-                return false;
-            }
-            else if ((MNAWindow.Timer >= internalTimeInTimerForStopCurrent + typeTimer) && internalTimeInTimerForStopCurrent != 0)
-            {
-                return true;
-            }
-            else
-                return false;
-        }// таймер спада тока
-
-        public override void OutState() //запись состояний в state
-        {
-            if ((prevVV1On != vV1On) && vV1On)
-                state = (ushort)(State | 1);
-            else if (prevVV1On != vV1On)
-                state = (ushort)(State ^ 1);
-
-            if ((prevVV2On != vV2On) && vV2On)
-                state = (ushort)(State | 2);
-            else if (prevVV2On != vV2On)
-                state = (ushort)(State ^ 2);
-
-            if ((prevVV1Off != vV1Off) && vV1Off)
-                state = (ushort)(State | 4);
-            else if (prevVV1Off != vV1Off)
-                state = (ushort)(State ^ 4);
-
-            if ((prevVV2Off != vV2Off) && vV2Off)
-                state = (ushort)(State | 8);
-            else if (prevVV2Off != vV2Off)
-                state = (ushort)(State ^ 8);
-
-            if ((prevCurrent != current) && current)
-                state = (ushort)(State | 16);
-            else if (prevCurrent != current)
-                state = (ushort)(State ^ 16);
-
-        }
-
-        protected override void ChangeOnVU() // Собираем изменения сигналов
-        {
-            if ((((vV1OnTimer != prevVV1OnTimer) || (prevVV1OnVu != vV1OnVu) || stopInPlace || stopByBRU) && !flagLockVV1On) || initialization)
-            {
-                if (vV1OnVu)
-                    vV1On = !vV1On;
-                else if (stopInPlace)
-                    vV1On = false;
-                else if (stopByBRU)
-                    vV1On = false;
-                else if (vV1OnTimer)
-                {
-                    vV1On = true;
-                }
-                else if (!vV1OnTimer)
-                    vV1On = false;
-
-                vV1OnVu = false;
-
-            }
-            if (((vV2OnTimer != prevVV2OnTimer) || (prevVV2OnVu != vV2OnVu) || stopInPlace || stopByBRU) && !flagLockVV2On)
-            {
-                if (vV2OnVu)
-                    vV2On = !vV2On;
-                else if (stopInPlace)
-                    vV2On = false;
-                else if (stopByBRU)
-                    vV2On = false;
-                else if (vV2OnTimer)
-                {
-                    vV2On = true;
-                }
-                else if (!vV2OnTimer)
-                    vV2On = false;
-
-                vV2OnVu = false;
-
-            }
-            if (((vV1OffTimer != prevVV1OffTimer) || (prevVV1OffVu != vV1OffVu) || stopInPlace || stopByBRU) && !flagLockVV1Off)
-            {
-                if (vV1OffVu)
-                    vV1Off = !vV1Off;
-                else if (stopInPlace)
-                    vV1Off = false;
-                else if (stopByBRU)
-                    vV1Off = false;
-                else if (vV1OffTimer)
-                    vV1Off = true;
-                else if (!vV1OffTimer)
-                    vV1Off = false;
-
-                vV1OffVu = false;
-
-            }
-            if (((vV2OffTimer != prevVV2OffTimer) || (prevVV2OffVu != vV2OffVu) || stopInPlace || stopByBRU) && !flagLockVV2Off)
-            {
-                if (vV2OffVu)
-                    vV2Off = !vV2Off;
-                else if (stopInPlace)
-                    vV2Off = false;
-                else if (stopByBRU)
-                    vV2Off = false;
-                else if (vV2OffTimer)
-                    vV2Off = true;
-                else if (!vV2OffTimer)
-                    vV2Off = false;
-
-                vV2OffVu = false;
-
-            }
-            if (((currentOnTimer != prevCurrentOnTimer) || (prevCurrentVu != currentVu)) && !flagLockCurrent)
-            {
-                if (currentVu)
-                    current = !current;
-                else if (currentOnTimer)
-                    current = true;
-                else if (!currentTimer)
-                    current = false;
-
-                currentVu = false;
-
-            }
-        }
 
         public override void Update() // обновление модели
         {
@@ -475,5 +232,247 @@ namespace Imitator_v_0._1
             prevVV2Off = vV2Off;
             prevCurrent = current;
         }
+
+        bool TimerPuskVV1On(int typeTimer, bool start, bool reset) //таймер включения ВВ 1
+        {
+            if (start && !reset && !flagForPuskVV1On)
+            {
+                internalTimeInTimerForPuskVV1On = MNAWindow.Timer;
+                flagForPuskVV1On = true;
+            }
+
+            if (reset)
+            {
+                flagForPuskVV1On = false;
+                internalTimeInTimerForPuskVV1On = 0;
+                return false;
+            }
+            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV1On + typeTimer) && internalTimeInTimerForPuskVV1On != 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        bool TimerPuskVV2On(int typeTimer, bool start, bool reset) //таймер включения ВВ 2
+        {
+            if (start && !reset && !flagForPuskVV2On)
+            {
+                internalTimeInTimerForPuskVV2On = MNAWindow.Timer;
+                flagForPuskVV2On = true;
+            }
+
+            if (reset)
+            {
+                flagForPuskVV2On = false;
+                internalTimeInTimerForPuskVV2On = 0;
+                return false;
+            }
+            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV2On + typeTimer) && internalTimeInTimerForPuskVV2On != 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        bool TimerPuskVV1Off(int typeTimer, bool start, bool reset) //таймер отключения ВВ 1
+        {
+            if (start && !reset && !flagForPuskVV1Off)
+            {
+                internalTimeInTimerForPuskVV1Off = MNAWindow.Timer;
+                flagForPuskVV1Off = true;
+            }
+
+            if (reset)
+            {
+                flagForPuskVV1Off = false;
+                internalTimeInTimerForPuskVV1Off = 0;
+                return false;
+            }
+            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV1Off + typeTimer) && internalTimeInTimerForPuskVV1Off != 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        bool TimerPuskVV2Off(int typeTimer, bool start, bool reset) //таймер отключения ВВ 2
+        {
+            if (start && !reset && !flagForPuskVV2Off)
+            {
+                internalTimeInTimerForPuskVV2Off = MNAWindow.Timer;
+                flagForPuskVV2Off = true;
+            }
+
+            if (reset)
+            {
+                flagForPuskVV2Off = false;
+                internalTimeInTimerForPuskVV2Off = 0;
+                return false;
+            }
+            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskVV2Off + typeTimer) && internalTimeInTimerForPuskVV2Off != 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        bool TimerPuskCurrent(int typeTimer, bool start, bool reset) // таймер набора тока
+        {
+            if (start && !reset && !flagForPuskCurrent)
+            {
+                internalTimeInTimerForPuskCurrent = MNAWindow.Timer;
+                flagForPuskCurrent = true;
+            }
+
+            if (reset)
+            {
+                flagForPuskCurrent = false;
+                internalTimeInTimerForPuskCurrent = 0;
+                return false;
+            }
+            else if ((MNAWindow.Timer >= internalTimeInTimerForPuskCurrent + typeTimer) && internalTimeInTimerForPuskCurrent != 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        bool TimerStopCurrent(int typeTimer, bool start, bool reset) // таймер спада тока
+        {
+            if (start && !reset && !flagForStopCurrent)
+            {
+                internalTimeInTimerForStopCurrent = MNAWindow.Timer;
+                flagForStopCurrent = true;
+            }
+
+            if (reset)
+            {
+                flagForStopCurrent = false;
+                internalTimeInTimerForStopCurrent = 0;
+                return false;
+            }
+            else if ((MNAWindow.Timer >= internalTimeInTimerForStopCurrent + typeTimer) && internalTimeInTimerForStopCurrent != 0)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+
+        public override void OutState() //запись состояний в state
+        {            
+            SetState(prevVV1On, vV1On, 1);
+            SetState(prevVV2On, vV2On, 2);
+            SetState(prevVV1Off, vV1Off, 4);
+            SetState(prevVV2Off, vV2Off, 8);           
+            SetState(prevCurrent, current, 16);
+        }
+
+        protected override void SetState(bool b1, bool b2, int i)
+        {
+            if ((b1 != b2) && b2)
+                state = (ushort)(State | i);
+            else if (b1 != b2)
+                state = (ushort)(State ^ i);
+        }
+
+        protected override void ChangeOnVU() // Собираем изменения сигналов
+        {
+            if ((((vV1OnTimer != prevVV1OnTimer) || (prevVV1OnVu != vV1OnVu) || stopInPlace || stopByBRU) && !flagLockVV1On) || initialization)
+            {
+                if (vV1OnVu)
+                    vV1On = !vV1On;
+                else if (stopInPlace)
+                    vV1On = false;
+                else if (stopByBRU)
+                    vV1On = false;
+                else if (vV1OnTimer)
+                {
+                    vV1On = true;
+                }
+                else if (!vV1OnTimer)
+                    vV1On = false;
+
+                vV1OnVu = false;
+            }
+            
+            if (((vV2OnTimer != prevVV2OnTimer) || (prevVV2OnVu != vV2OnVu) || stopInPlace || stopByBRU) && !flagLockVV2On)
+            {
+                if (vV2OnVu)
+                    vV2On = !vV2On;
+                else if (stopInPlace)
+                    vV2On = false;
+                else if (stopByBRU)
+                    vV2On = false;
+                else if (vV2OnTimer)
+                    vV2On = true;
+                else if (!vV2OnTimer)
+                    vV2On = false;
+
+                vV2OnVu = false;
+            }
+
+            if (((vV1OffTimer != prevVV1OffTimer) || (prevVV1OffVu != vV1OffVu) || stopInPlace || stopByBRU) && !flagLockVV1Off)
+            {
+                if (vV1OffVu)
+                    vV1Off = !vV1Off;
+                else if (stopInPlace)
+                    vV1Off = true;
+                else if (stopByBRU)
+                    vV1Off = true;
+                else if (vV1OffTimer)
+                    vV1Off = true;
+                else if (!vV1OffTimer)
+                    vV1Off = false;
+
+                vV1OffVu = false;
+            }
+
+            if (((vV2OffTimer != prevVV2OffTimer) || (prevVV2OffVu != vV2OffVu) || stopInPlace || stopByBRU) && !flagLockVV2Off)
+            {
+                if (vV2OffVu)
+                    vV2Off = !vV2Off;
+                else if (stopInPlace)
+                    vV2Off = true;
+                else if (stopByBRU)
+                    vV2Off = true;
+                else if (vV2OffTimer)
+                    vV2Off = true;
+                else if (!vV2OffTimer)
+                    vV2Off = false;
+
+                vV2OffVu = false;
+            }
+            
+            if (((currentOnTimer != prevCurrentOnTimer) || (prevCurrentVu != currentVu)) && !flagLockCurrent)
+            {
+                if (currentVu)
+                    current = !current;
+                else if (currentOnTimer)
+                    current = true;
+                else if (!currentTimer)
+                    current = false;
+
+                currentVu = false;
+            }
+        }
+
+        //protected void SetElement(bool vV,bool timer, bool prevTimer, bool vU, bool prevVu, bool stopInPlace, bool stopByBRU, bool flagLock)
+        //{
+        //    if (((timer != prevTimer) || (prevVu != vU) || stopInPlace || stopByBRU) && !flagLock)
+        //    {
+        //        if (vU)
+        //            vV = !vV;
+        //        else if (stopInPlace)
+        //            vV = false;
+        //        else if (stopByBRU)
+        //            vV = false;
+        //        else if (timer)
+        //            vV = true;
+        //        else if (!timer)
+        //            vV = false;
+        //    }
+        //}
     }
 }

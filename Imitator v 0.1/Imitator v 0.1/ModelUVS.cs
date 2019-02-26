@@ -370,27 +370,20 @@ namespace Imitator_v_0._1
             SSHOnVU = false;
 
         } 
-        public override void OutState() //запись состояний в state
+        public override void OutState() // запись состояний в state
+        {            
+            SetState(prevMagneticStarter, magneticStarter, 2);
+            SetState(prevPressure, pressure, 4);
+            SetState(prevVoltage, voltage, 1);
+            SetState(prevSSH, SSH, 8);
+        }
+
+        protected override void SetState(bool b1, bool b2, int i)
         {
-            if ((prevMagneticStarter != magneticStarter) && magneticStarter)
-                state = (ushort)(State | 2);
-            else if (prevMagneticStarter != magneticStarter)
-                state = (ushort)(State ^ 2);
-
-            if ((prevPressure != pressure) && pressure)
-                state = (ushort)(State | 4);
-            else if (prevPressure != pressure)
-                state = (ushort)(State ^ 4);
-
-            if ((prevVoltage != voltage) && voltage)
-                state = (ushort)(State | 1);
-            else if (prevVoltage != voltage)
-                state = (ushort)(State ^ 1);
-
-            if ((prevSSH != SSH) && SSH)
-                state = (ushort)(State | 8);
-            else if (prevSSH != SSH)
-                state = (ushort)(State ^ 8);
+            if ((b1 != b2) && b2)
+                state = (ushort)(State | i);
+            else if (b1 != b2)
+                state = (ushort)(State ^ i);
         }
     }
 }

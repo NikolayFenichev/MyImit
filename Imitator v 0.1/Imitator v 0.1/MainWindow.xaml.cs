@@ -22,10 +22,10 @@ namespace Imitator_v_0._1
 {
     public partial class MainWindow : Window
     {
-        public static UVSWindow uvsWindow;
-        public static MNAWindow mnaWindow;
-        static public ModbusMaster MbMaster { get; private set; }
-        static public ModbusMaster MbTcpMaster { get; private set; }
+        public static UVSWindow uvsWindow = new UVSWindow();
+        public static MNAWindow mnaWindow = new MNAWindow();
+        public static ModbusMaster MbMaster { get; private set; }
+        public static ModbusMaster MbTcpMaster { get; private set; }
         
         SerialPort sp = new SerialPort("COM2")
         {
@@ -46,55 +46,24 @@ namespace Imitator_v_0._1
 
         private void VspomSistems_Click(object sender, RoutedEventArgs e)
         {
-            uvsWindow = new UVSWindow()
-            {
-                Owner = this
-            };
-            if(Imitation.IsChecked == true) // работаем с имитационной моделью
-            {
-                FlagSimulation = true;
-                try
-                {
-                    uvsWindow.Show();
-                }
-                catch
-                {
-                    new ErrorWindow().Show();
-                    Imitation.IsChecked = false;
-                }
-            }
-            else // работаем с железом
-            {
-                FlagSimulation = false;
-                MbMaster = ModbusSerialMaster.CreateRtu(sp);
-                try
-                {
-                    sp.Open();
-                    uvsWindow.Show();
-                }
-                catch (System.IO.IOException)
-                {
-                    Console.WriteLine("Порт не существует");
-                }
-                catch (Exception)
-                {
-
-                }
-            }           
+            OpenWindow(uvsWindow);           
         }
 
         private void PumpingUnit_Click(object sender, RoutedEventArgs e)
         {
-            mnaWindow = new MNAWindow()
-            {
-                Owner = this
-            };
+            OpenWindow(mnaWindow);
+        }
+
+        private void OpenWindow(Window window)
+        {
+            window.Owner = this;
+
             if (Imitation.IsChecked == true) // работаем с имитационной моделью
             {
                 FlagSimulation = true;
                 try
                 {
-                    mnaWindow.Show();
+                    window.Show();
                 }
                 catch
                 {
@@ -109,14 +78,13 @@ namespace Imitator_v_0._1
                 try
                 {
                     sp.Open();
-                    mnaWindow.Show();
+                    window.Show();
                 }
                 catch (System.IO.IOException)
                 {
                     Console.WriteLine("Порт не существует");
                 }
             }
-            
         }
     }
 }

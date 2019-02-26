@@ -269,3 +269,33 @@ D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.Cor
 D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.CopyComplete
 D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.exe
 D:\Imit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.pdb
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\Imitator v 0.1.exe.config
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\Imitator v 0.1.exe
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\Imitator v 0.1.pdb
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\NModbus4.dll
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\bin\Debug\NModbus4.xml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csprojAssemblyReference.cache
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSWindow.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\CreateWindow.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\ErrorWindow.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MainWindow.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MNAWindow.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSAdressSignal.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSSettingsWindow.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSWindow.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\App.g.cs
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1_MarkupCompile.cache
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1_MarkupCompile.lref
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\CreateWindow.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\ErrorWindow.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MainWindow.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\MNAWindow.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSAdressSignal.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\UVSSettingsWindow.baml
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.g.resources
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator_v_0._1.Properties.Resources.resources
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.GenerateResource.cache
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.CoreCompileInputs.cache
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.csproj.CopyComplete
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.exe
+D:\ImitatorGit\MyImit\Imitator v 0.1\Imitator v 0.1\obj\Debug\Imitator v 0.1.pdb
